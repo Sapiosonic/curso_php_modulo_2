@@ -1,6 +1,13 @@
 <?php
 
-  $validate = validate([
-    'name' => 's',
-    'email' => 'e'
-  ]);
+  require "../../../bootstrap.php";
+
+  dd($_POST);
+
+
+  // $validate = validate([
+  //   'name' => 's',
+  //   'email' => 'e'
+  // ]);
+
+?>

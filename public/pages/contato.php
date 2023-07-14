@@ -23,6 +23,6 @@
     <textarea name="message" cols="30" rows="10" class="form-control" placeholder="Digite aqui sua mensagem"></textarea>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-warning">Submit</button>
 
 </form>
