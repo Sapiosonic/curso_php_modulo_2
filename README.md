@@ -10,4 +10,8 @@ Módulo dois do curso de PHP e JavaScript do Clube FullStack.
 
 `composer install`
 
+## Ao adicionar novas funções no arquivo composer.json
+
+`composer dump-autoload -o`
+
 
