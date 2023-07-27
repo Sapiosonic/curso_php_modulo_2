@@ -1,27 +1,24 @@
 <?php 
 
-  function flash($key, $message, $type){
+  function flash($key, $message, $type = 'danger') {
 
-    $type = 'danger';
-    
-    if(!isset($_SESSION['flash']['$key'])){
+	if (!isset($_SESSION['flash'][$key])) {
+		$_SESSION['flash'][$key] = '<span class="alert alert-' . $type . '">' . $message . '</span>';
+	}
 
-      $_SESSION['flash']['$key'] = '<span class="alert alert-' . $type .'">' . $message . '</span>';
-    }
+}
 
-  }
+function get($key) {
 
-  function get($key){
+	if (isset($_SESSION['flash'][$key])) {
+		$message = $_SESSION['flash'][$key];
 
-    if(isset($_SESSION['flash']['$key'])){
+		unset($_SESSION['flash'][$key]);
 
-      $message = $_SESSION['flash']['$key'];
+		return $message ?? '';
+	}
 
-      unset($_SESSION['flash']['$key']);
-
-      return $message ?? '';
-    }
-  }
+}
 
 
 ?>
