@@ -14,6 +14,10 @@ Módulo dois do curso de PHP e JavaScript do Clube FullStack.
 
 `composer dump-autoload -o`
 
+## Instalando o PHPMailer
+
+`composer require` && `phpmailer`
+
 ## Biblioteca PHP para envio de e-mails
 
 ['PHPMailer'](https://github.com/PHPMailer/PHPMailer)
