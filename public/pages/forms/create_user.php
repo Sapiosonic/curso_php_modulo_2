@@ -17,14 +17,14 @@
 
   $cadastrado = create('users', $validate);
 
-  if ($cadastrado) {
-    flash('message', 'Cadastrado com sucesso', 'success');
+  // if ($cadastrado) {
+  //   flash('message', 'Cadastrado com sucesso', 'success');
 
-    return redirect('create_user');
-  }
+  //   return redirect('create_user');
+  // }
 
-  flash('message', 'Erro ao cadastrar');
-  redirect('create_user');
+  // flash('message', 'Erro ao cadastrar');
+  // redirect('create_user');
 
 
 ?>
