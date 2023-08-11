@@ -30,5 +30,9 @@ Módulo dois do curso de PHP e JavaScript do Clube FullStack.
 
 ['PHP Para Quem Entende PHP'](https://github.com/aleduca/curso-php-para-quem-entende-php/tree/master)
 
+## PHP The Right Way
+
+[Manual de boas práticas da linguagem PHP](https://phptherightway.com/)
+
 
 
