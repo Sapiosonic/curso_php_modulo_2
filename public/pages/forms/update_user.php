@@ -18,11 +18,11 @@ $validate = validate([
 
 $atualizado = update('users', $validate, ['id', $id]);
 
-// if ($atualizado) {
-// 	flash('message', 'Atualizado com sucesso', 'success');
+if ($atualizado) {
+	flash('message', 'Atualizado com sucesso', 'success');
 
-// 	return redirect("edit_user&id=" . $id);
-// }
+	return redirect("edit_user&id=" . $id);
+}
 
-// flash('message', 'Erro ao atualizar');
-// redirect("edit_user&id=" . $id);
+flash('message', 'Erro ao atualizar');
+redirect("edit_user&id=" . $id);

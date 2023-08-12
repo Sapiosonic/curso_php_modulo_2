@@ -47,25 +47,23 @@ function update($table, $fields, $where) {
 
 	$data = array_map(function ($field) {
 		return "{$field} = :{$field}";
-	}, $fields);
+	}, array_keys($fields));
 
-	// $sql = "update {$table} set ";
+	$sql = "update {$table} set ";
 
-	// $sql .= implode(',', $data);
+	$sql .= implode(',', $data);
+	
+	$sql .= " where {$where[0]} = :{$where[0]}";
 
-	// $sql .= " where {$where[0]} = :{$where[0]}";
+	$data = array_merge($fields, [$where[0] => $where[1]]);
 
-	// $data = array_merge($fields, [$where[0] => $where[1]]);
+	$pdo = connect();
 
-	// dd($data);
+	$update = $pdo->prepare($sql);
 
-	// $pdo = connect();
+	$update->execute($data);
 
-	// $update = $pdo->prepare($sql);
-
-	// $update->execute($data);
-
-	// return $update->rowCount();
+	return $update->rowCount();
 
 }
 
