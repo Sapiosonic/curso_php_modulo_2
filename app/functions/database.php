@@ -52,7 +52,7 @@ function update($table, $fields, $where) {
 	$sql = "update {$table} set ";
 
 	$sql .= implode(',', $data);
-	
+
 	$sql .= " where {$where[0]} = :{$where[0]}";
 
 	$data = array_merge($fields, [$where[0] => $where[1]]);
@@ -81,6 +81,12 @@ function find($table, $field, $value) {
 	return $find->fetch();
 }
 
-function delete() {
+function delete($table, $field, $value) {
+	$pdo = connect();
 
+	$sql = "delete from {$table} where {$field} = :{$field}";
+	$delete = $pdo->prepare($sql);
+	$delete->bindValue($field, $value);
+
+	return $delete->execute();
 }

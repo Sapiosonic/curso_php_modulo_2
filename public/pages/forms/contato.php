@@ -17,7 +17,7 @@ $validate = validate([
 
 $data = [
 	'quem' => $validate->email,
-	'para' => 'contato@devclass.com.br',
+	'para' => 'radames_ads@yahoo.com',
 	'mensagem' => $validate->message,
 	'assunto' => $validate->subject,
 ];
