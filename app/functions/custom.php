@@ -1,22 +1,28 @@
 <?php
 
-function dd($dump){
+function dd($dump) {
 
-  var_dump($dump);
-  die();
+	var_dump($dump);
+	die();
+
 }
 
-function request(){
-  $request = $_SERVER['REQUEST_METHOD'];
-  $check_method = ($request == 'POST') ?  $_POST :  $_GET;
+function request() {
 
-  return $check_method;
+	$request = $_SERVER['REQUEST_METHOD'];
+
+	if ($request == 'POST') {
+		return $_POST;
+	}
+
+	return $_GET;
+
 }
 
-function redirect($target){
-  return header("location:/?page={$target}");
+function redirect($target) {
+	return header("location:/?page={$target}");
 }
 
-function redirect2Home(){
-  return header("location:/");
+function redirectToHome() {
+	return header("location:/");
 }

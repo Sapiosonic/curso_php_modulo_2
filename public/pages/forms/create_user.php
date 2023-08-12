@@ -1,6 +1,6 @@
 <?php
 
-  require "../../../bootstrap.php";
+require "../../../bootstrap.php";
 
 if (isEmpty()) {
 	flash('message', 'Preencha todos os campos');

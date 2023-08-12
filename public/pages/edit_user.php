@@ -1,10 +1,8 @@
-<?= get('message');?>
+<?=get('message');?>
 
-<?php 
-  $user = find('users','id',$_GET['id']);
-  dd('user');
+<?php
+$user = find('users', 'id', $_GET['id']);
 ?>
-
 <form action="/pages/forms/update_user.php" method="POST" role="form">
 
     <div class="form-group">
